@@ -12,4 +12,8 @@ public class Circulo {
 	public boolean contieneA(Punto punto) {
 		return this.centro.calcularDistanciaA(punto) <= this.radio;
 	}
+	
+	public boolean intersectaCon(Circulo circulo) {
+		return this.centro.calcularDistanciaA(circulo.centro) <= this.radio + circulo.radio; 
+	}
 }
